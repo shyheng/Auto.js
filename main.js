@@ -1,13 +1,14 @@
-toast("开始")
-if (!$power_manager.isIgnoringBatteryOptimizations()) {
-    console.log("未开启忽略电池优化");
-    $power_manager.requestIgnoreBatteryOptimizations();
-}
-console.log($timers.addDailyTask({
-    path: "/storage/脚本/青年大学习签到.js",
-    time: new Date(0, 0, 0, 15, 41, 0),
-    delay: 0,
-    loopTimes: 1,
-    interval: 0,
-}));
-toast("完成")
+openAppSetting(getPackageName("最强蜗牛"));
+sleep(2000)
+click("结束运行")
+sleep(2000)
+click("确定")
+home()
+launchApp("最强蜗牛")
+sleep(25000)
+setScreenMetrics(1080, 2340);
+toast(click(2,2))
+sleep(2000)
+toast(click(600,1920))
+sleep(5000)
+toast(click(125,2226))
